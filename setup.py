@@ -62,6 +62,7 @@ requirements = [
     "numpy",
     "requests",
     pytorch_dep,
+    "huggingface-hub",
 ]
 
 # Excluding 8.3.* because of https://github.com/pytorch/vision/issues/4934

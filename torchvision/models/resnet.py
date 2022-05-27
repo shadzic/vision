@@ -1,4 +1,5 @@
 from functools import partial
+from huggingface_hub import hf_hub_url
 from typing import Type, Any, Callable, Union, List, Optional
 
 import torch
@@ -331,7 +332,7 @@ class ResNet18_Weights(WeightsEnum):
 
 class ResNet34_Weights(WeightsEnum):
     IMAGENET1K_V1 = Weights(
-        url="https://download.pytorch.org/models/resnet34-b627a593.pth",
+        url=hf_hub_url(repo_id="Selma/pytorch-resnet34", filename="pytorch_resnet34.pth"),
         transforms=partial(ImageClassification, crop_size=224),
         meta={
             **_COMMON_META,
